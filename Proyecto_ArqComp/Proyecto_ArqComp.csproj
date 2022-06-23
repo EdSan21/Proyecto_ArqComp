@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98A39F94-E903-40C5-AAC9-C43B2487EBBF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Proyecto_ArqComp</RootNamespace>
+    <AssemblyName>Proyecto_ArqComp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataClass\QueriesRepo.cs" />
+    <Compile Include="Forms\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SistemaGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SistemaGeneral.Designer.cs">
+      <DependentUpon>SistemaGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapper\CrearUsuarioMapper.cs" />
+    <Compile Include="Mapper\MapperBase.cs" />
+    <Compile Include="Otros\UsuarioDAL.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reader\CrearUsuarioReader.cs" />
+    <Compile Include="Reader\ObjectReader.cs" />
+    <Compile Include="Reader\ObjectReaderWithConnection.cs" />
+    <Compile Include="Utils\QueryProcessor.cs" />
+    <EmbeddedResource Include="Forms\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SistemaGeneral.resx">
+      <DependentUpon>SistemaGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{39d3b426-15a9-4bcb-8283-3c998023dbd3}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{886978b3-1124-45c7-91f0-22f64349dd0f}</Project>
+      <Name>Modelos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_Proyecto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_email2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_pass2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hospedaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Internet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LT_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viajero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\japon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Temporada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\router-de-wifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hospedaje_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transporte_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Temporada_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Internet_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Internet_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comida_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T_Alta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chubu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chugoku.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hokkaido.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kansai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kanto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kyushu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shikoku.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tohoku.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T_Baja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puntos.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageShow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_train.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_vuelos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_excursiones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_pase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_tour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JR_Pass.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alquiler_Bicicleta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PocketWifi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SIM_JP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apartamento.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hostales_Albergues.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hotel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Love_Hotels.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minshuku.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ryokan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shukubo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hoteles_Capsula.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P_Economico.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P_Premium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alessia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aoki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bojji.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Daichi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Daiki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gwen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hanako.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hinata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hiroshi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jhon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Joe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kaori.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luffy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marrie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nami.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Naoki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Naruto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Natsu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Peter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ryota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sachio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sakura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Satoshi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stephanie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Takeshi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thomas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yuki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hotaru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lago_Toya.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Niseko.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoo_Arashiyama.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aquamarine_Fukushima.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Risshaku_Temple.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Senshu_Park.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sensoji_Temple.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shibuya.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tokyo_Tower.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hida_Takayama.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kanazawa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monkey_Park.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Castillo_Osaka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kinkaku_ji.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Santuario_Fushimi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monumento_Hiroshima.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ohara_Museum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tsunoshima_Ohashi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kochi_Castle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Matsuyama_Castle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ritsurin_Garden.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kumamoto_Castle.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nikko_Tosho.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sengan_en.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogOut.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

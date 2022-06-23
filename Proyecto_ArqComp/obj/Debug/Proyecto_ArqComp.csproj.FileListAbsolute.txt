@@ -1,0 +1,17 @@
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\obj\Debug\Proyecto_ArqComp.csproj.AssemblyReference.cache
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\obj\Debug\Proyecto_ArqComp.csproj.GenerateResource.cache
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\obj\Debug\Proyecto_ArqComp.Properties.Resources.resources
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\obj\Debug\Proyecto_ArqComp.csproj.CoreCompileInputs.cache
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\bin\Debug\Proyecto_ArqComp.exe.config
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\bin\Debug\Proyecto_ArqComp.exe
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\bin\Debug\Proyecto_ArqComp.pdb
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\bin\Debug\BL.dll
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\bin\Debug\BL.pdb
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\obj\Debug\Proyecto_ArqComp.csproj.CopyComplete
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\obj\Debug\Proyecto_ArqComp.exe
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\obj\Debug\Proyecto_ArqComp.pdb
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\bin\Debug\Modelos.dll
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\bin\Debug\Modelos.pdb
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\obj\Debug\Proyecto_ArqComp.Forms.Inicio.resources
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\obj\Debug\Proyecto_ArqComp.Forms.Registro.resources
+C:\Users\Home\source\repos\Proyecto_ArqComp\Proyecto_ArqComp\obj\Debug\Proyecto_ArqComp.Forms.SistemaGeneral.resources
